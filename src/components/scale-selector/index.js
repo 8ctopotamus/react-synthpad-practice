@@ -4,8 +4,6 @@ import thesaurusScales from '../../utils/thesaurusScales'
 
 const Select = styled.select`
   display: block;
-  margin: 0 auto 25px;
-  width: 50%;
   padding: 10px;
   font-size: 18px;
   font-weight: bold;

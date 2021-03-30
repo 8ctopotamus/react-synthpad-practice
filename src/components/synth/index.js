@@ -16,6 +16,7 @@ const Synth = () => {
     ? new FMSynth()
     : new DuoSynth()
 
+  synth.volume.value = state.volume
   synth.toDestination()
 
   useEffect(() => {
