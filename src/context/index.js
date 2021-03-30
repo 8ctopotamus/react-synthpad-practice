@@ -8,6 +8,7 @@ const AppContext = createContext(thesaurusScales)
 const reducer = (state, action) => {
   switch(action.type) {
     case 'CHANGE_SCALE':
+      console.log(action.payload)
       return thesaurusScales[action.payload]
   }
   return state

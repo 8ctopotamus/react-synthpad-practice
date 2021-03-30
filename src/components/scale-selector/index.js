@@ -15,12 +15,17 @@ const categories = Object.entries(thesaurusScales).reduce((prev, curr) => {
 const ScaleSelector = () => {
   const { dispatch } = useAppContext()
 
+  const handleChange = e => {
+    dispatch({ type: 'CHANGE_SCALE', payload: e.target.value })
+    e.target.blur()
+  }
+
   return (
-    <select onChange={e => dispatch({ type: 'CHANGE_SCALE', payload: e.target.value })}>
+    <select onChange={handleChange}>
       {Object.entries(categories).map(cat => {
         const [ label, scales ] = cat
         return (
-          <optgroup label={label}>
+          <optgroup label={label} key={label}>
             {Object.values(scales)
               .map(val => <option value={val} key={val}>{val}</option>)}
           </optgroup>
