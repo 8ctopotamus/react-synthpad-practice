@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { useAppContext } from '../../context'
 
 const Layout = styled.div`
-  background: ${({ theme }) => theme === 'light' ? '#bbb' : '#000'};
+  background: ${({ theme }) => theme === 'light' ? '#bbb' : '#1F2041'};
   height: 100vh;
   display: grid;
   place-items: center;
@@ -11,6 +11,8 @@ const Layout = styled.div`
 export default ({ children }) => {
   const { state: { theme } } = useAppContext()
 
-  return <Layout theme={theme}>{ children }</Layout>
+  return <Layout theme={theme}>
+    <div>{ children }</div>
+  </Layout>
 }
 

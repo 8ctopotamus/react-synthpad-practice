@@ -1,5 +1,25 @@
+import styled from 'styled-components'
 import { useAppContext } from '../../context'
 import thesaurusScales from '../../utils/thesaurusScales'
+
+const Select = styled.select`
+  display: block;
+  margin: 0 auto 25px;
+  width: 50%;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  background: transparent;
+  border: 2px solid black;
+  
+  ${({ theme }) => theme === 'light' ? `
+    color: black;
+    border-color: black;
+  ` : `
+    color: white;
+    border-color: white;
+  `}
+`
 
 const categories = Object.entries(thesaurusScales).reduce((prev, curr) => {
   const [ key, value ] = curr
@@ -13,7 +33,7 @@ const categories = Object.entries(thesaurusScales).reduce((prev, curr) => {
 
 
 const ScaleSelector = () => {
-  const { dispatch } = useAppContext()
+  const { state: { theme }, dispatch } = useAppContext()
 
   const handleChange = e => {
     dispatch({ type: 'CHANGE_SCALE', payload: e.target.value })
@@ -21,7 +41,7 @@ const ScaleSelector = () => {
   }
 
   return (
-    <select onChange={handleChange}>
+    <Select theme={theme} onChange={handleChange}>
       {Object.entries(categories).map(cat => {
         const [ label, scales ] = cat
         return (
@@ -31,7 +51,7 @@ const ScaleSelector = () => {
           </optgroup>
         )
       })}
-    </select>
+    </Select>
   )
 }
 

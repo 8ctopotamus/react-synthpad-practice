@@ -6,7 +6,7 @@ import Pad from './pad'
 const styles = {
   display: 'grid',
   gridTemplateColumns: 'repeat(6, 1fr)',
-  gridGap: 30
+  gridGap: 20
 }
 
 const Synth = () => {
