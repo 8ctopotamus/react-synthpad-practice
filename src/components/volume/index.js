@@ -2,7 +2,7 @@ import { Donut } from 'react-dial-knob'
 import { useAppContext } from '../../context'
 
 const Dial = () => {
-  const { state: { volume }, dispatch } = useAppContext()
+  const { state: { volume, theme }, dispatch } = useAppContext()
   return (
     <Donut 
       diameter={100}
@@ -11,9 +11,10 @@ const Dial = () => {
       step={1}
       value={!!volume ? volume : 0}
       onValueChange={value => dispatch({ type: 'CHANGE_VOLUME', payload: value })}
+      style={{textAlign: 'center'}}
       ariaLabelledBy="volume"
     >
-      <label id="volume">volume</label>
+      <label id="volume" style={{color: theme === 'light' ? 'black' : 'white'}}>volume</label>
     </Donut>
   )
 }

@@ -21,11 +21,9 @@ const Select = styled.select`
 
 const categories = Object.entries(thesaurusScales).reduce((prev, curr) => {
   const [ key, value ] = curr
-  if (prev[value.theme]) {
-    prev[value.theme].push(key)
-  } else {
-    prev[value.theme] = [key]
-  }
+  prev[value.theme]
+    ? prev[value.theme].push(key)
+    : prev[value.theme] = [key]
   return prev
 }, {})
 
