@@ -1,13 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import { AppContextProvider } from './context'
+import Layout from './components/layout'
+import ScaleSelector from './components/scale-selector'
+import Synth from './components/synth'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        
-      </header>
-    </div>
+    <AppContextProvider>
+      <Layout>
+        <ScaleSelector />
+        <Synth />
+      </Layout>
+    </AppContextProvider>
   );
 }
 

@@ -1,5 +1,5 @@
 const lightState = {
-  mode: 'light',
+  theme: 'light',
   notes: [
       {
           letter: 'a',
@@ -45,7 +45,7 @@ const lightState = {
 }
 
 const darkState = {
-  mode: 'dark',
+  theme: 'dark',
   notes: [
       {
           letter: 'a',
@@ -90,7 +90,7 @@ const darkState = {
   ]
 }
 const extendedIonian = {
-  mode: 'light',
+  theme: 'light',
   notes: [
       {
           letter: 'z',
@@ -215,7 +215,7 @@ const extendedIonian = {
   ]
 }
 const extendedDorian = {
-  mode: 'dark',
+  theme: 'dark',
   notes: [
       {
           letter: 'z',
@@ -340,7 +340,7 @@ const extendedDorian = {
   ]
 }
 const extendedPhrygian = {
-  mode: 'dark',
+  theme: 'dark',
   notes: [
       {
           letter: 'z',
@@ -465,7 +465,7 @@ const extendedPhrygian = {
   ]
 }
 const extendedLydian = {
-  mode: 'light',
+  theme: 'light',
   notes: [
       {
           letter: 'z',
@@ -590,7 +590,7 @@ const extendedLydian = {
   ]
 }
 const extendedMixolydian = {
-  mode: 'light',
+  theme: 'light',
   notes: [
       {
           letter: 'z',
@@ -715,7 +715,7 @@ const extendedMixolydian = {
   ]
 }
 const extendedAeolian = {
-  mode: 'dark',
+  theme: 'dark',
   notes: [
       {
           letter: 'z',
@@ -840,7 +840,7 @@ const extendedAeolian = {
   ]
 }
 const extendedLocrian = {
-  mode: 'dark',
+  theme: 'dark',
   notes: [
       {
           letter: 'z',
@@ -965,7 +965,7 @@ const extendedLocrian = {
   ]
 }
 const extendedBlues = {
-  mode: 'dark',
+  theme: 'dark',
   notes: [
       {
           letter: 'z',
@@ -1095,7 +1095,7 @@ const extendedBlues = {
   ]
 }
 const extendedSuperLocrian = {
-  mode: 'dark',
+  theme: 'dark',
   notes: [
       {
           letter: 'z',
@@ -1220,7 +1220,7 @@ const extendedSuperLocrian = {
   ]
 }
 const extendedMinorBebop = {
-  mode: 'dark',
+  theme: 'dark',
   notes: [
       {
           letter: 'z',
@@ -1350,7 +1350,7 @@ const extendedMinorBebop = {
   ]
 }
 const extendedSousa = {
-  mode: 'light',
+  theme: 'light',
   notes: [
       {
           letter: 'z',
@@ -1480,7 +1480,7 @@ const extendedSousa = {
   ]
 }
 const extendedDiminished = {
-  mode: 'dark',
+  theme: 'dark',
   notes: [
       {
           letter: 'z',
@@ -1610,7 +1610,7 @@ const extendedDiminished = {
   ]
 }
 const extendedLydianDominant = {
-  mode: 'light',
+  theme: 'light',
   notes: [
       {
           letter: 'z',
@@ -1735,7 +1735,7 @@ const extendedLydianDominant = {
   ]
 }
 const extendedFifthModeHarmonicMinor = {
-  mode: 'light',
+  theme: 'light',
   notes: [
       {
           letter: 'z',
@@ -1859,7 +1859,8 @@ const extendedFifthModeHarmonicMinor = {
       }
   ]
 }
-export const payloadMap = {
+
+export default {
   "light": lightState,
   "dark": darkState,
   "Ionian": extendedIonian,
